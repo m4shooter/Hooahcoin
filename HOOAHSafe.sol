@@ -1,10 +1,10 @@
 pragma solidity ^0.4.10;
 import './StandardToken.sol';
-// requires 133,650,000 BAT deposited here
-contract BATSafe {
+// requires 133,650,000 HOOAH deposited here
+contract HOOAHSafe {
   mapping (address => uint256) allocations;
   uint256 public unlockDate;
-  address public BAT;
+  address public HOOAH;
   uint256 public constant exponent = 10**18;
 
   function HOOAHSafe(address _HOOAH) {
