@@ -7,8 +7,8 @@ contract BATSafe {
   address public BAT;
   uint256 public constant exponent = 10**18;
 
-  function BATSafe(address _BAT) {
-    BAT = _BAT;
+  function HOOAHSafe(address _HOOAH) {
+    HOOAH = _HOOAH;
     unlockDate = now + 6 * 30 days;
     allocations[0xe0f6EF3D61255d1Bd7ad66987D2fBB3FE5Ee8Ea4] = 16000000;
     allocations[0xCB25966330044310ecD09634ea6B1f4190d5B10D] = 16000000;
@@ -45,7 +45,7 @@ contract BATSafe {
     if(now < unlockDate) throw;
     uint256 entitled = allocations[msg.sender];
     allocations[msg.sender] = 0;
-    if(!StandardToken(BAT).transfer(msg.sender, entitled * exponent)) throw;
+    if(!StandardToken(HOOAH).transfer(msg.sender, entitled * exponent)) throw;
   }
 
 }
